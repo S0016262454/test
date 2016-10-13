@@ -1,0 +1,5 @@
+service {
+"IOTADMIN"."hcpworkshop.model::IoTModel.T_IOT_DEVICETYPES_INFO" as "DeviceTypesInfo";
+"IOTADMIN"."hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION" as "Subscription";
+"IOTADMIN"."hcpworkshop.model::IoTModel.T_MOB_NOTIFICATION" as "Notification";
+}
