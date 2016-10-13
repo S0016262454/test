@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="TestCalc" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="true" executionSemantic="UNDEFINED" outputViewType="Aggregation" cacheInvalidationPeriod="DAILY">
+  <descriptions defaultDescription="TestCalc"/>
+<defaultSchema schemaName="IOTADMIN"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="IOTADMIN" columnObjectName="hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION"/>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION">
+    <descriptions/>
+    <attributes>
+      <attribute id="MOBILEUSER" order="2" attributeHierarchyActive="false" displayAttribute="false" semanticType="empty">
+        <descriptions defaultDescription="MOBILEUSER"/>
+        <keyMapping schemaName="IOTADMIN" columnObjectName="hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION" columnName="MOBILEUSER"/>
+      </attribute>
+      <attribute id="LASTUPDATED" order="3" attributeHierarchyActive="false" displayAttribute="false" semanticType="empty">
+        <descriptions defaultDescription="LASTUPDATED"/>
+        <keyMapping schemaName="IOTADMIN" columnObjectName="hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION" columnName="LASTUPDATED"/>
+      </attribute>
+      <attribute id="TITLE" order="4" attributeHierarchyActive="false" displayAttribute="false" semanticType="empty">
+        <descriptions defaultDescription="TITLE"/>
+        <keyMapping schemaName="IOTADMIN" columnObjectName="hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION" columnName="TITLE"/>
+      </attribute>
+      <attribute id="DELIVERYADDRESS" order="5" attributeHierarchyActive="false" displayAttribute="false" semanticType="empty">
+        <descriptions defaultDescription="DELIVERYADDRESS"/>
+        <keyMapping schemaName="IOTADMIN" columnObjectName="hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION" columnName="DELIVERYADDRESS"/>
+      </attribute>
+    
+      <attribute id="ID" key="true" order="6" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping schemaName="IOTADMIN" columnObjectName="hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION" columnName="ID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="DEVICEID" order="1" aggregationType="sum" engineAggregation="count" measureType="simple">
+        <descriptions defaultDescription="DEVICEID"/>
+        <measureMapping schemaName="IOTADMIN" columnObjectName="hcpworkshop.model::IoTModel.T_MOB_SUBSCRIPTION" columnName="DEVICEID"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>
