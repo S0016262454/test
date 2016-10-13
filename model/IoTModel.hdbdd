@@ -1,0 +1,29 @@
+namespace hcpworkshop.model;
+@Schema: 'IOTADMIN'
+context IoTModel {
+	type SmallString: String(50);
+	type LongString: String(200);
+	type VeryLongString: String(1000);
+	
+	entity T_IOT_DEVICETYPES_INFO {
+    	key DEVICETYPEID: SmallString;
+    	SHORTDESCRIPTION: SmallString;
+    	LONGDESCRIPTION: LongString;
+    	DATECREATED: LocalDate;
+	}
+	entity T_MOB_SUBSCRIPTION {
+    	key ID: SmallString;
+    	DEVICEID: SmallString;
+    	MOBILEUSER: SmallString;
+    	LASTUPDATED: LocalDate;
+    	TITLE: LongString;
+    	DELIVERYADDRESS: VeryLongString;
+	}
+	entity T_MOB_NOTIFICATION {
+    	key ID: SmallString;
+    	DATECREATED: LocalDate;
+    	DEVICEID: SmallString;
+    	DELIVERYADDRESS: VeryLongString;
+    	DATA: Double;
+	}
+};
